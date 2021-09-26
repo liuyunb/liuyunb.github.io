@@ -100,12 +100,12 @@ Yume Shoka = Hexo</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicm0fdw5cj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclh0m9pdj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciub8ja1j20zk0m81ky.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipet8c1a2j20zk0m8kct.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicitf0kl1j20zk0m87fe.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicli9lfebj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeuibk9fj20zk0m8ay2.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitzannuj20zk0m8b29.jpg"></li>
         </ul>
       </div>
     </header>
@@ -149,12 +149,45 @@ Yume Shoka = Hexo</title>
   <div class="body md" itemprop="articleBody">
     
 
-    
+    <h3 id="一、-Java初学第一天"><a href="#一、-Java初学第一天" class="headerlink" title="一、 Java初学第一天"></a>一、 Java初学第一天</h3><h4 id="1、数据类型"><a href="#1、数据类型" class="headerlink" title="1、数据类型"></a>1、数据类型</h4><h5 id="①、基本数据类型"><a href="#①、基本数据类型" class="headerlink" title="①、基本数据类型"></a>①、基本数据类型</h5><p>​    整形 ： byte（一字节）、short（两字节）、int(四字节，开发最常用)、long（八字节，结尾要加l或L否转为int类型）；</p>
+<p>​    浮点型 ： float（4字节，单精度，结尾要加f或F，否则报错）、double（8字节、双精度，默认为double）；</p>
+<p>​    字符型 ： char（一个字符，两个字节）</p>
+<p>​    布尔型 ： boolean（只能为true或false，底层用1和0表示占1个bit，但是最小存储单位为一个字节，故占一个字节）；</p>
+<h5 id="②、引用数据类型"><a href="#②、引用数据类型" class="headerlink" title="②、引用数据类型"></a>②、引用数据类型</h5><p>类，数组，接口；</p>
+<h4 id="2、自动类型提升"><a href="#2、自动类型提升" class="headerlink" title="2、自动类型提升"></a>2、自动类型提升</h4><h5 id="①、正常类型提升"><a href="#①、正常类型提升" class="headerlink" title="①、正常类型提升"></a>①、正常类型提升</h5><p>​    byte、short、char（三者做运算所得结果为int类型）-&gt; int -&gt; long -&gt; float -&gt; double;</p>
+<h5 id="②、特殊：-String"><a href="#②、特殊：-String" class="headerlink" title="②、特殊： String"></a>②、特殊： String</h5><p>​    String与其他类型只能进行+运算，但此+运算符表示连接，且结果为String类型。</p>
+<p>​    例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	    String str1 = <span class="string">&quot;liu&quot;</span>;</span><br><span class="line">	    String str2 = <span class="string">&quot;yu&quot;</span>;</span><br><span class="line">	    String str3 = str1 + str2;</span><br><span class="line">	    System.out.println(str3);<span class="comment">//输出结果为liuyu</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="③、练习"><a href="#③、练习" class="headerlink" title="③、练习"></a>③、练习</h5><p>​    下列哪些语句能得到“a1*”；</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;a&quot;</span> + <span class="number">1</span> + <span class="string">&#x27;*&#x27;</span>);<span class="comment">//true</span></span><br><span class="line">        System.out.println(<span class="string">&#x27;a&#x27;</span> + <span class="number">1</span> + <span class="string">&quot;*&quot;</span>);<span class="comment">//false</span></span><br><span class="line">        System.out.println(<span class="string">&#x27;a&#x27;</span> + <span class="string">&#x27;1&#x27;</span> + <span class="string">&#x27;*&#x27;</span>);<span class="comment">//false</span></span><br><span class="line">        System.out.println(<span class="string">&quot;a&quot;</span> + <span class="number">1</span> + <span class="string">&quot;*&quot;</span>);<span class="comment">//true</span></span><br><span class="line">        System.out.println(<span class="string">&#x27;a&#x27;</span> + <span class="number">1</span> + <span class="string">&#x27;*&#x27;</span>);<span class="comment">//false</span></span><br><span class="line">        System.out.println(<span class="string">&quot;a&quot;</span> + <span class="string">&#x27;1&#x27;</span> + <span class="string">&quot;*&quot;</span>);<span class="comment">//true</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3、进制转换"><a href="#3、进制转换" class="headerlink" title="3、进制转换"></a>3、进制转换</h4><h5 id="①、10转2"><a href="#①、10转2" class="headerlink" title="①、10转2"></a>①、10转2</h5><p>​    除二取余的逆</p>
+<p>​    例：13 转化为 2进制</p>
+<p>​    13/2 = 6  ……1   -&gt; 6/2 = 3 …… 0  -&gt; 3/2 = 1 …… 1 -&gt;  1/2 = 0…… 1；</p>
+<p>​    余数为1011 ，取逆得13的二进制为1101；</p>
+<h5 id="②、2转10"><a href="#②、2转10" class="headerlink" title="②、2转10"></a>②、2转10</h5><p>​    设n为各数的位置，取各位置上的数×2^(n-1);</p>
+<p>​    例：1101 转化为 2进制</p>
+<p>​     1101 -&gt; 1 * 2^0 + 0 * 2^1 + 1 * 2^2 + 1 * 2^3 = 13;</p>
+<h5 id="③、2转8、16，及16、8转2"><a href="#③、2转8、16，及16、8转2" class="headerlink" title="③、2转8、16，及16、8转2"></a>③、2转8、16，及16、8转2</h5><p>​    2转8，每三位一转；2转16，每四位一转；</p>
+<p>​    <img data-src="C:\Users\liuyu\Pictures\截图\2 2 8、16.png" alt="2 2 8、16" style="zoom:67%;"/></p>
+<p>​        8、16转2，一位分别转三位、四位</p>
+<p>​    <img data-src="C:\Users\liuyu\Pictures\截图\8、16 2 2.png" alt="8、16 2 2" style="zoom: 80%;" /></p>
+
   </div>
 
    <footer>
 
     <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2021-09-26 20:28:55" itemprop="dateModified" datetime="2021-09-26T20:28:55+08:00">2021-09-26</time>
+  </span>
 </div>
 
       
@@ -208,7 +241,7 @@ Yume Shoka = Hexo</title>
     <div class="item left">
       
 
-  <a href="/2021/09/25/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicli9lfebj20zk0m84qp.jpg" title="Hello World">
+  <a href="/2021/09/25/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeuibk9fj20zk0m8ay2.jpg" title="Hello World">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>Hello World</h3>
@@ -232,6 +265,7 @@ Yume Shoka = Hexo</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81-Java%E5%88%9D%E5%AD%A6%E7%AC%AC%E4%B8%80%E5%A4%A9"><span class="toc-number">1.</span> <span class="toc-text">一、 Java初学第一天</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.</span> <span class="toc-text">1、数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0%E3%80%81%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.1.</span> <span class="toc-text">①、基本数据类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1%E3%80%81%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.2.</span> <span class="toc-text">②、引用数据类型</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E6%8F%90%E5%8D%87"><span class="toc-number">1.2.</span> <span class="toc-text">2、自动类型提升</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0%E3%80%81%E6%AD%A3%E5%B8%B8%E7%B1%BB%E5%9E%8B%E6%8F%90%E5%8D%87"><span class="toc-number">1.2.1.</span> <span class="toc-text">①、正常类型提升</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1%E3%80%81%E7%89%B9%E6%AE%8A%EF%BC%9A-String"><span class="toc-number">1.2.2.</span> <span class="toc-text">②、特殊： String</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A2%E3%80%81%E7%BB%83%E4%B9%A0"><span class="toc-number">1.2.3.</span> <span class="toc-text">③、练习</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.3.</span> <span class="toc-text">3、进制转换</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0%E3%80%8110%E8%BD%AC2"><span class="toc-number">1.3.1.</span> <span class="toc-text">①、10转2</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1%E3%80%812%E8%BD%AC10"><span class="toc-number">1.3.2.</span> <span class="toc-text">②、2转10</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A2%E3%80%812%E8%BD%AC8%E3%80%8116%EF%BC%8C%E5%8F%8A16%E3%80%818%E8%BD%AC2"><span class="toc-number">1.3.3.</span> <span class="toc-text">③、2转8、16，及16、8转2</span></a></li></ol></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -304,7 +338,7 @@ Yume Shoka = Hexo</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/09/25/My-first-blog/" title="My first blog">My first blog</a></span>
+    <span><a href="/2021/09/25/hello-world/" title="Hello World">Hello World</a></span>
   </li>
 
       
@@ -313,7 +347,7 @@ Yume Shoka = Hexo</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/09/25/hello-world/" title="Hello World">Hello World</a></span>
+    <span><a href="/2021/09/25/My-first-blog/" title="My first blog">My first blog</a></span>
   </li>
 
   </ul>
