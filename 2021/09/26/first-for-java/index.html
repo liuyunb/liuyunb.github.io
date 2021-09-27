@@ -100,12 +100,12 @@ Yume Shoka = Hexo</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclj61ylzj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclip4jbpj20zk0m87cv.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclil3m4ej20zk0m8tn8.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipetlbztpj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciukx8a7j20zk0m8aio.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclwrdwyaj20zk0m8are.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicm0fdw5cj20zk0m8hdt.jpg"></li>
           <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclfw2t96j20zk0m8x6p.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeyonbf9j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li>
         </ul>
       </div>
     </header>
@@ -149,12 +149,12 @@ Yume Shoka = Hexo</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h3 id="一、-Java初学第一天"><a href="#一、-Java初学第一天" class="headerlink" title="一、 Java初学第一天"></a>一、 Java初学第一天</h3><h4 id="1、数据类型"><a href="#1、数据类型" class="headerlink" title="1、数据类型"></a>1、数据类型</h4><h5 id="①、基本数据类型"><a href="#①、基本数据类型" class="headerlink" title="①、基本数据类型"></a>①、基本数据类型</h5><p>​    整形 ： byte（一字节）、short（两字节）、int(四字节，开发最常用)、long（八字节，结尾要加l或L否转为int类型）；</p>
+    <h3 id="Java初学第一天"><a href="#Java初学第一天" class="headerlink" title="Java初学第一天"></a>Java初学第一天</h3><h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><h5 id="①、基本数据类型"><a href="#①、基本数据类型" class="headerlink" title="①、基本数据类型"></a>①、基本数据类型</h5><p>​    整形 ： byte（一字节）、short（两字节）、int(四字节，开发最常用)、long（八字节，结尾要加l或L否转为int类型）；</p>
 <p>​    浮点型 ： float（4字节，单精度，结尾要加f或F，否则报错）、double（8字节、双精度，默认为double）；</p>
 <p>​    字符型 ： char（一个字符，两个字节）</p>
 <p>​    布尔型 ： boolean（只能为true或false，底层用1和0表示占1个bit，但是最小存储单位为一个字节，故占一个字节）；</p>
 <h5 id="②、引用数据类型"><a href="#②、引用数据类型" class="headerlink" title="②、引用数据类型"></a>②、引用数据类型</h5><p>类，数组，接口；</p>
-<h4 id="2、自动类型提升"><a href="#2、自动类型提升" class="headerlink" title="2、自动类型提升"></a>2、自动类型提升</h4><h5 id="①、正常类型提升"><a href="#①、正常类型提升" class="headerlink" title="①、正常类型提升"></a>①、正常类型提升</h5><p>​    byte、short、char（三者做运算所得结果为int类型）-&gt; int -&gt; long -&gt; float -&gt; double;</p>
+<h4 id="自动类型提升"><a href="#自动类型提升" class="headerlink" title="自动类型提升"></a>自动类型提升</h4><h5 id="①、正常类型提升"><a href="#①、正常类型提升" class="headerlink" title="①、正常类型提升"></a>①、正常类型提升</h5><p>​    byte、short、char（三者做运算所得结果为int类型）-&gt; int -&gt; long -&gt; float -&gt; double;</p>
 <h5 id="②、特殊：-String"><a href="#②、特殊：-String" class="headerlink" title="②、特殊： String"></a>②、特殊： String</h5><p>​    String与其他类型只能进行+运算，但此+运算符表示连接，且结果为String类型。</p>
 <p>​    例：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	    String str1 = <span class="string">&quot;liu&quot;</span>;</span><br><span class="line">	    String str2 = <span class="string">&quot;yu&quot;</span>;</span><br><span class="line">	    String str3 = str1 + str2;</span><br><span class="line">	    System.out.println(str3);<span class="comment">//输出结果为liuyu</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -164,7 +164,7 @@ Yume Shoka = Hexo</title>
 
 
 
-<h4 id="3、进制转换"><a href="#3、进制转换" class="headerlink" title="3、进制转换"></a>3、进制转换</h4><h5 id="①、10转2"><a href="#①、10转2" class="headerlink" title="①、10转2"></a>①、10转2</h5><p>​    除二取余的逆</p>
+<h4 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h4><h5 id="①、10转2"><a href="#①、10转2" class="headerlink" title="①、10转2"></a>①、10转2</h5><p>​    除二取余的逆</p>
 <p>​    例：13 转化为 2进制</p>
 <p>​    13/2 = 6  ……1   -&gt; 6/2 = 3 …… 0  -&gt; 3/2 = 1 …… 1 -&gt;  1/2 = 0…… 1；</p>
 <p>​    余数为1011 ，取逆得13的二进制为1101；</p>
@@ -177,7 +177,7 @@ Yume Shoka = Hexo</title>
 <img data-src="first-for-java/81622.png" alt="81622" style="zoom:60%;">
 
 <p>​                    </p>
-<h3 id="二、Java初学第二天"><a href="#二、Java初学第二天" class="headerlink" title="二、Java初学第二天"></a>二、Java初学第二天</h3><h4 id="1、算术运算符、赋值运算符、比较运算法"><a href="#1、算术运算符、赋值运算符、比较运算法" class="headerlink" title="1、算术运算符、赋值运算符、比较运算法"></a>1、算术运算符、赋值运算符、比较运算法</h4><p><strong>PS</strong>：对于赋值符号=，程序从右向左，对于算术运算符程序从左向右进行；</p>
+<h3 id="Java初学第二天"><a href="#Java初学第二天" class="headerlink" title="Java初学第二天"></a>Java初学第二天</h3><h4 id="算术运算符、赋值运算符、比较运算法"><a href="#算术运算符、赋值运算符、比较运算法" class="headerlink" title="算术运算符、赋值运算符、比较运算法"></a>算术运算符、赋值运算符、比较运算法</h4><p><strong>PS</strong>：对于赋值符号=，程序从右向左，对于算术运算符程序从左向右进行；</p>
 <p>大体同c一样，但有几点需要注意：</p>
 <h5 id="①-（-等同理）以及-（–）-不改变数据类型"><a href="#①-（-等同理）以及-（–）-不改变数据类型" class="headerlink" title="① += （*=等同理）以及 ++ （–） 不改变数据类型"></a>① += （*=等同理）以及 ++ （–） 不改变数据类型</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">        <span class="keyword">short</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="comment">//        i = i +1;//错误的，参考上一节类型提升char、byte、short进行运算结果为int</span></span><br><span class="line">        i++;</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">        System.out.println(i);<span class="comment">//上述两个都可以，说明没有改变类型结果为i = 3；</span></span><br></pre></td></tr></table></figure>
 
@@ -214,7 +214,7 @@ Yume Shoka = Hexo</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2021-09-27 21:33:55" itemprop="dateModified" datetime="2021-09-27T21:33:55+08:00">2021-09-27</time>
+    <time title="Modified: 2021-09-27 21:37:20" itemprop="dateModified" datetime="2021-09-27T21:37:20+08:00">2021-09-27</time>
   </span>
 </div>
 
@@ -269,7 +269,7 @@ Yume Shoka = Hexo</title>
     <div class="item left">
       
 
-  <a href="/2021/09/26/twice-for-vue/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipet4bz0yj20zk0m8e81.jpg" title="twice for vue">
+  <a href="/2021/09/26/twice-for-vue/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclx6phq6j20zk0m8e36.jpg" title="twice for vue">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>twice for vue</h3>
@@ -293,7 +293,7 @@ Yume Shoka = Hexo</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81-Java%E5%88%9D%E5%AD%A6%E7%AC%AC%E4%B8%80%E5%A4%A9"><span class="toc-number">1.</span> <span class="toc-text">一、 Java初学第一天</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.</span> <span class="toc-text">1、数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0%E3%80%81%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.1.</span> <span class="toc-text">①、基本数据类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1%E3%80%81%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.2.</span> <span class="toc-text">②、引用数据类型</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E6%8F%90%E5%8D%87"><span class="toc-number">1.2.</span> <span class="toc-text">2、自动类型提升</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0%E3%80%81%E6%AD%A3%E5%B8%B8%E7%B1%BB%E5%9E%8B%E6%8F%90%E5%8D%87"><span class="toc-number">1.2.1.</span> <span class="toc-text">①、正常类型提升</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1%E3%80%81%E7%89%B9%E6%AE%8A%EF%BC%9A-String"><span class="toc-number">1.2.2.</span> <span class="toc-text">②、特殊： String</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A2%E3%80%81%E7%BB%83%E4%B9%A0"><span class="toc-number">1.2.3.</span> <span class="toc-text">③、练习</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.3.</span> <span class="toc-text">3、进制转换</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0%E3%80%8110%E8%BD%AC2"><span class="toc-number">1.3.1.</span> <span class="toc-text">①、10转2</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1%E3%80%812%E8%BD%AC10"><span class="toc-number">1.3.2.</span> <span class="toc-text">②、2转10</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A2%E3%80%812%E8%BD%AC8%E3%80%8116%EF%BC%8C%E5%8F%8A16%E3%80%818%E8%BD%AC2"><span class="toc-number">1.3.3.</span> <span class="toc-text">③、2转8、16，及16、8转2</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Java%E5%88%9D%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%A4%A9"><span class="toc-number">2.</span> <span class="toc-text">二、Java初学第二天</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6%E3%80%81%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6%E3%80%81%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text">1、算术运算符、赋值运算符、比较运算法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0-%EF%BC%88-%E7%AD%89%E5%90%8C%E7%90%86%EF%BC%89%E4%BB%A5%E5%8F%8A-%EF%BC%88%E2%80%93%EF%BC%89-%E4%B8%8D%E6%94%B9%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.1.1.</span> <span class="toc-text">① +&#x3D; （*&#x3D;等同理）以及 ++ （–） 不改变数据类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1%EF%BC%88a-%EF%BC%89%E4%B8%8E-%EF%BC%88-a%EF%BC%89%E5%9C%A8c-%E5%92%8CJava%E4%B8%AD%E4%B8%8D%E4%B8%80%E6%A0%B7"><span class="toc-number">2.1.2.</span> <span class="toc-text">②（a++）与 （++a）在c++和Java中不一样</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java%E5%88%9D%E5%AD%A6%E7%AC%AC%E4%B8%80%E5%A4%A9"><span class="toc-number">1.</span> <span class="toc-text">Java初学第一天</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0%E3%80%81%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.1.</span> <span class="toc-text">①、基本数据类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1%E3%80%81%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.2.</span> <span class="toc-text">②、引用数据类型</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E6%8F%90%E5%8D%87"><span class="toc-number">1.2.</span> <span class="toc-text">自动类型提升</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0%E3%80%81%E6%AD%A3%E5%B8%B8%E7%B1%BB%E5%9E%8B%E6%8F%90%E5%8D%87"><span class="toc-number">1.2.1.</span> <span class="toc-text">①、正常类型提升</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1%E3%80%81%E7%89%B9%E6%AE%8A%EF%BC%9A-String"><span class="toc-number">1.2.2.</span> <span class="toc-text">②、特殊： String</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A2%E3%80%81%E7%BB%83%E4%B9%A0"><span class="toc-number">1.2.3.</span> <span class="toc-text">③、练习</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.3.</span> <span class="toc-text">进制转换</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0%E3%80%8110%E8%BD%AC2"><span class="toc-number">1.3.1.</span> <span class="toc-text">①、10转2</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1%E3%80%812%E8%BD%AC10"><span class="toc-number">1.3.2.</span> <span class="toc-text">②、2转10</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A2%E3%80%812%E8%BD%AC8%E3%80%8116%EF%BC%8C%E5%8F%8A16%E3%80%818%E8%BD%AC2"><span class="toc-number">1.3.3.</span> <span class="toc-text">③、2转8、16，及16、8转2</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java%E5%88%9D%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%A4%A9"><span class="toc-number">2.</span> <span class="toc-text">Java初学第二天</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6%E3%80%81%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6%E3%80%81%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text">算术运算符、赋值运算符、比较运算法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0-%EF%BC%88-%E7%AD%89%E5%90%8C%E7%90%86%EF%BC%89%E4%BB%A5%E5%8F%8A-%EF%BC%88%E2%80%93%EF%BC%89-%E4%B8%8D%E6%94%B9%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.1.1.</span> <span class="toc-text">① +&#x3D; （*&#x3D;等同理）以及 ++ （–） 不改变数据类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1%EF%BC%88a-%EF%BC%89%E4%B8%8E-%EF%BC%88-a%EF%BC%89%E5%9C%A8c-%E5%92%8CJava%E4%B8%AD%E4%B8%8D%E4%B8%80%E6%A0%B7"><span class="toc-number">2.1.2.</span> <span class="toc-text">②（a++）与 （++a）在c++和Java中不一样</span></a></li></ol></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -366,7 +366,7 @@ Yume Shoka = Hexo</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/09/25/My-first-blog/" title="My first blog">My first blog</a></span>
+    <span><a href="/2021/09/25/hello-world/" title="Hello World">Hello World</a></span>
   </li>
 
       
@@ -375,7 +375,7 @@ Yume Shoka = Hexo</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/09/25/hello-world/" title="Hello World">Hello World</a></span>
+    <span><a href="/2021/09/25/My-first-blog/" title="My first blog">My first blog</a></span>
   </li>
 
       
