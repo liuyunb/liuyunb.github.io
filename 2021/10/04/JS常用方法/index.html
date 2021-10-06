@@ -100,12 +100,12 @@ Yume Shoka = Hexo</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipesng5oej20zk0m87d4.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclj9410cj20zk0m8h12.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciuv0socj20zk0m8qes.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicli3sbvtj20zk0m8x6p.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicm0fdw5cj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeyonbf9j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclh5u05ej20zk0m87df.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclx6phq6j20zk0m8e36.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4baakhj20zk0m8h5q.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhtuo6nj20zk0m8ttm.jpg"></li>
         </ul>
       </div>
     </header>
@@ -153,6 +153,24 @@ Yume Shoka = Hexo</title>
 
 
 
+<h4 id="apply"><a href="#apply" class="headerlink" title="apply"></a>apply</h4><h5 id="与call功能一样，但不同的是，传入参数时需要以数组的形式传入"><a href="#与call功能一样，但不同的是，传入参数时需要以数组的形式传入" class="headerlink" title="与call功能一样，但不同的是，传入参数时需要以数组的形式传入"></a>与call功能一样，但不同的是，传入参数时需要以数组的形式传入</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> func = <span class="function"><span class="keyword">function</span> (<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>);<span class="comment">//不改变前指向windows</span></span><br><span class="line">    <span class="built_in">console</span>.log(a+b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//1、调用函数</span></span><br><span class="line"><span class="comment">//func.apply(null,[1,2]);//第一个参数用null的话表示不改变原本函数this指向，后面的数组表示传入的参数</span></span><br><span class="line">func.apply(windows,[<span class="number">1</span>,<span class="number">2</span>]);<span class="comment">//第一个参数最好还是写原本的this指向这样在严格模式下不会报错，也更严谨一些</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2、改变函数this指向</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> o = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;liuyu&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func.apply(o，[<span class="number">1</span>,<span class="number">2</span>]);<span class="comment">//执行该条语句后，func里面的this指向o</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="apply常用的使用场景："><a href="#apply常用的使用场景：" class="headerlink" title="apply常用的使用场景："></a>apply常用的使用场景：</h5><h6 id="利用Math函数的原生方法使得我们更加方便的操作数组"><a href="#利用Math函数的原生方法使得我们更加方便的操作数组" class="headerlink" title="利用Math函数的原生方法使得我们更加方便的操作数组"></a>利用Math函数的原生方法使得我们更加方便的操作数组</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">5</span>,<span class="number">9</span>];</span><br><span class="line"><span class="keyword">var</span> max = <span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>,arr);<span class="comment">//Math也可以写成null，这样结果就是arr里面的最大值</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="bind（开发最常用）"><a href="#bind（开发最常用）" class="headerlink" title="bind（开发最常用）"></a>bind（开发最常用）</h4><h5 id="bind函数和call，与apply不同，他只能够改变this指向而不能调用函数"><a href="#bind函数和call，与apply不同，他只能够改变this指向而不能调用函数" class="headerlink" title="bind函数和call，与apply不同，他只能够改变this指向而不能调用函数"></a>bind函数和call，与apply不同，他只能够改变this指向而不能调用函数</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> func = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> o = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;liuyu&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> func1 = func.bind(o);</span><br><span class="line">func1();</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="常用案例-：按钮点击后，要在几（本案例为3秒）秒后才能再次点击"><a href="#常用案例-：按钮点击后，要在几（本案例为3秒）秒后才能再次点击" class="headerlink" title="常用案例 ：按钮点击后，要在几（本案例为3秒）秒后才能再次点击"></a>常用案例 ：按钮点击后，要在几（本案例为3秒）秒后才能再次点击</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> btn = <span class="built_in">document</span>.querySelctor(<span class="string">&quot;button&quot;</span>);</span><br><span class="line">btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.disabled = <span class="literal">true</span>;</span><br><span class="line">    setTimeOut(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.disabled = <span class="literal">false</span>;</span><br><span class="line">    &#125;.bind(<span class="built_in">this</span>),<span class="number">3000</span>)<span class="comment">//通过bind改变定时器中this指向且不立即调用</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
 
 
 <h3 id="数组常用方法"><a href="#数组常用方法" class="headerlink" title="数组常用方法"></a>数组常用方法</h3><h4 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h4><h5 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">arr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">value,index,array</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(value);<span class="comment">//value表示索引号为index的数组成员的值</span></span><br><span class="line">    <span class="built_in">console</span>.log(index);<span class="comment">//index表示当前遍历的数组成员的索引号</span></span><br><span class="line">	<span class="built_in">console</span>.log(array[index]);<span class="comment">//array表示该数组</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
@@ -167,8 +185,20 @@ Yume Shoka = Hexo</title>
 
 
 
+
+
 <h3 id="字符串常用方法"><a href="#字符串常用方法" class="headerlink" title="字符串常用方法"></a>字符串常用方法</h3><h4 id="trim"><a href="#trim" class="headerlink" title="trim"></a>trim</h4><h5 id="删除字符串两边的空格"><a href="#删除字符串两边的空格" class="headerlink" title="删除字符串两边的空格"></a>删除字符串两边的空格</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;   ly  &quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.length);<span class="comment">//长度为6</span></span><br><span class="line"><span class="keyword">var</span> str1 = str.trim();</span><br><span class="line"><span class="built_in">console</span>.log(str1.length);<span class="comment">//长度为2</span></span><br></pre></td></tr></table></figure>
 
+
+
+<h3 id="对象常用方法"><a href="#对象常用方法" class="headerlink" title="对象常用方法"></a>对象常用方法</h3><h4 id="Object-defineProperty"><a href="#Object-defineProperty" class="headerlink" title="Object.defineProperty"></a>Object.defineProperty</h4><h5 id="定义某一个对象中的属性和特性"><a href="#定义某一个对象中的属性和特性" class="headerlink" title="定义某一个对象中的属性和特性"></a>定义某一个对象中的属性和特性</h5><h6 id="对于Object-defineProperty（obj-prop-descriptor）中的三个参数："><a href="#对于Object-defineProperty（obj-prop-descriptor）中的三个参数：" class="headerlink" title="对于Object.defineProperty（obj,prop,descriptor）中的三个参数："></a>对于Object.defineProperty（obj,prop,descriptor）中的三个参数：</h6><p>​    obj:需要修改的对象；</p>
+<p>​    prop：需要改的属性的名字或者想要添加的属性的名字</p>
+<p>​    descriptor：以下重点说明：</p>
+<p>​        以对象{}形式书写，且里面包括四个成员：</p>
+<p>​        value ： 设置属性的值，默认为undefined</p>
+<p>​        writable：值是否可重写。true | false。默认为false</p>
+<p>​        enumerable ： 是否可被枚举（枚举代表是否可被Object.keys(obj)查到）</p>
+<p>​        configurable ： 是否可删除或者修改属性</p>
 
   </div>
 
@@ -180,7 +210,7 @@ Yume Shoka = Hexo</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2021-10-04 21:58:44" itemprop="dateModified" datetime="2021-10-04T21:58:44+08:00">2021-10-04</time>
+    <time title="Modified: 2021-10-06 11:25:48" itemprop="dateModified" datetime="2021-10-06T11:25:48+08:00">2021-10-06</time>
   </span>
 </div>
 
@@ -235,7 +265,7 @@ Yume Shoka = Hexo</title>
     <div class="item left">
       
 
-  <a href="/2021/09/26/first-for-java/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipevuctzzj20zk0m84qp.jpg" title="first for java">
+  <a href="/2021/09/26/first-for-java/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciuja1j1j20zk0m8kjl.jpg" title="first for java">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>first for java</h3>
@@ -259,7 +289,7 @@ Yume Shoka = Hexo</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">函数常用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#call-%E4%B8%BB%E8%A6%81%E7%94%A8%E4%BA%8E%E6%94%B9%E5%8F%98this%E6%8C%87%E5%90%91"><span class="toc-number">1.1.</span> <span class="toc-text">call( 主要用于改变this指向 )</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%94%A8%E4%BA%8E%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.1.</span> <span class="toc-text">用于调用函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%94%B9%E5%8F%98%E5%87%BD%E6%95%B0%E5%86%85this%E6%8C%87%E5%90%91"><span class="toc-number">1.1.2.</span> <span class="toc-text">改变函数内this指向</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">数组常用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#forEach"><span class="toc-number">2.1.</span> <span class="toc-text">forEach</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84"><span class="toc-number">2.1.1.</span> <span class="toc-text">遍历数组</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#filter"><span class="toc-number">2.2.</span> <span class="toc-text">filter</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AD%9B%E9%80%89%E6%95%B0%E7%BB%84%E5%B9%B6%E8%BF%94%E8%BF%98%E4%B8%80%E4%B8%AA%E6%96%B0%E6%95%B0%E7%BB%84"><span class="toc-number">2.2.1.</span> <span class="toc-text">筛选数组并返还一个新数组</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#some"><span class="toc-number">2.3.</span> <span class="toc-text">some</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%81%8D%E5%8E%86%E6%9F%A5%E6%89%BE%E6%98%AF%E5%90%A6%E6%9C%89%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84%E5%80%BC%EF%BC%8C%E4%B8%80%E6%97%A6%E6%89%BE%E5%88%B0%E4%BE%BF%E9%80%80%E5%87%BA%E9%81%8D%E5%8E%86%EF%BC%8C%E5%B9%B6%E8%BF%94%E5%9B%9E%E4%B8%80%E4%B8%AA%E5%B8%83%E5%B0%94%E5%80%BC"><span class="toc-number">2.3.1.</span> <span class="toc-text">遍历查找是否有符合条件的值，一旦找到便退出遍历，并返回一个布尔值</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">字符串常用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#trim"><span class="toc-number">3.1.</span> <span class="toc-text">trim</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%A4%E8%BE%B9%E7%9A%84%E7%A9%BA%E6%A0%BC"><span class="toc-number">3.1.1.</span> <span class="toc-text">删除字符串两边的空格</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">函数常用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#call-%E4%B8%BB%E8%A6%81%E7%94%A8%E4%BA%8E%E6%94%B9%E5%8F%98this%E6%8C%87%E5%90%91"><span class="toc-number">1.1.</span> <span class="toc-text">call( 主要用于改变this指向 )</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%94%A8%E4%BA%8E%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.1.</span> <span class="toc-text">用于调用函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%94%B9%E5%8F%98%E5%87%BD%E6%95%B0%E5%86%85this%E6%8C%87%E5%90%91"><span class="toc-number">1.1.2.</span> <span class="toc-text">改变函数内this指向</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#apply"><span class="toc-number">1.2.</span> <span class="toc-text">apply</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%8Ecall%E5%8A%9F%E8%83%BD%E4%B8%80%E6%A0%B7%EF%BC%8C%E4%BD%86%E4%B8%8D%E5%90%8C%E7%9A%84%E6%98%AF%EF%BC%8C%E4%BC%A0%E5%85%A5%E5%8F%82%E6%95%B0%E6%97%B6%E9%9C%80%E8%A6%81%E4%BB%A5%E6%95%B0%E7%BB%84%E7%9A%84%E5%BD%A2%E5%BC%8F%E4%BC%A0%E5%85%A5"><span class="toc-number">1.2.1.</span> <span class="toc-text">与call功能一样，但不同的是，传入参数时需要以数组的形式传入</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#apply%E5%B8%B8%E7%94%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%9A"><span class="toc-number">1.2.2.</span> <span class="toc-text">apply常用的使用场景：</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%88%A9%E7%94%A8Math%E5%87%BD%E6%95%B0%E7%9A%84%E5%8E%9F%E7%94%9F%E6%96%B9%E6%B3%95%E4%BD%BF%E5%BE%97%E6%88%91%E4%BB%AC%E6%9B%B4%E5%8A%A0%E6%96%B9%E4%BE%BF%E7%9A%84%E6%93%8D%E4%BD%9C%E6%95%B0%E7%BB%84"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">利用Math函数的原生方法使得我们更加方便的操作数组</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bind%EF%BC%88%E5%BC%80%E5%8F%91%E6%9C%80%E5%B8%B8%E7%94%A8%EF%BC%89"><span class="toc-number">1.3.</span> <span class="toc-text">bind（开发最常用）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#bind%E5%87%BD%E6%95%B0%E5%92%8Ccall%EF%BC%8C%E4%B8%8Eapply%E4%B8%8D%E5%90%8C%EF%BC%8C%E4%BB%96%E5%8F%AA%E8%83%BD%E5%A4%9F%E6%94%B9%E5%8F%98this%E6%8C%87%E5%90%91%E8%80%8C%E4%B8%8D%E8%83%BD%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">1.3.1.</span> <span class="toc-text">bind函数和call，与apply不同，他只能够改变this指向而不能调用函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%A1%88%E4%BE%8B-%EF%BC%9A%E6%8C%89%E9%92%AE%E7%82%B9%E5%87%BB%E5%90%8E%EF%BC%8C%E8%A6%81%E5%9C%A8%E5%87%A0%EF%BC%88%E6%9C%AC%E6%A1%88%E4%BE%8B%E4%B8%BA3%E7%A7%92%EF%BC%89%E7%A7%92%E5%90%8E%E6%89%8D%E8%83%BD%E5%86%8D%E6%AC%A1%E7%82%B9%E5%87%BB"><span class="toc-number">1.3.2.</span> <span class="toc-text">常用案例 ：按钮点击后，要在几（本案例为3秒）秒后才能再次点击</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">数组常用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#forEach"><span class="toc-number">2.1.</span> <span class="toc-text">forEach</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84"><span class="toc-number">2.1.1.</span> <span class="toc-text">遍历数组</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#filter"><span class="toc-number">2.2.</span> <span class="toc-text">filter</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AD%9B%E9%80%89%E6%95%B0%E7%BB%84%E5%B9%B6%E8%BF%94%E8%BF%98%E4%B8%80%E4%B8%AA%E6%96%B0%E6%95%B0%E7%BB%84"><span class="toc-number">2.2.1.</span> <span class="toc-text">筛选数组并返还一个新数组</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#some"><span class="toc-number">2.3.</span> <span class="toc-text">some</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%81%8D%E5%8E%86%E6%9F%A5%E6%89%BE%E6%98%AF%E5%90%A6%E6%9C%89%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84%E5%80%BC%EF%BC%8C%E4%B8%80%E6%97%A6%E6%89%BE%E5%88%B0%E4%BE%BF%E9%80%80%E5%87%BA%E9%81%8D%E5%8E%86%EF%BC%8C%E5%B9%B6%E8%BF%94%E5%9B%9E%E4%B8%80%E4%B8%AA%E5%B8%83%E5%B0%94%E5%80%BC"><span class="toc-number">2.3.1.</span> <span class="toc-text">遍历查找是否有符合条件的值，一旦找到便退出遍历，并返回一个布尔值</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">字符串常用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#trim"><span class="toc-number">3.1.</span> <span class="toc-text">trim</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%A4%E8%BE%B9%E7%9A%84%E7%A9%BA%E6%A0%BC"><span class="toc-number">3.1.1.</span> <span class="toc-text">删除字符串两边的空格</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">对象常用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Object-defineProperty"><span class="toc-number">4.1.</span> <span class="toc-text">Object.defineProperty</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E6%9F%90%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E4%B8%AD%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7"><span class="toc-number">4.1.1.</span> <span class="toc-text">定义某一个对象中的属性和特性</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8EObject-defineProperty%EF%BC%88obj-prop-descriptor%EF%BC%89%E4%B8%AD%E7%9A%84%E4%B8%89%E4%B8%AA%E5%8F%82%E6%95%B0%EF%BC%9A"><span class="toc-number">4.1.1.1.</span> <span class="toc-text">对于Object.defineProperty（obj,prop,descriptor）中的三个参数：</span></a></li></ol></li></ol></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -332,25 +362,7 @@ Yume Shoka = Hexo</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/09/25/hello-world/" title="Hello World">Hello World</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/09/26/twice-for-vue/" title="twice for vue">twice for vue</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/10/04/JS%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" title="JS常用方法">JS常用方法</a></span>
+    <span><a href="/2021/09/25/My-first-blog/" title="My first blog">My first blog</a></span>
   </li>
 
       
@@ -368,7 +380,25 @@ Yume Shoka = Hexo</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/09/25/My-first-blog/" title="My first blog">My first blog</a></span>
+    <span><a href="/2021/09/26/twice-for-vue/" title="twice for vue">twice for vue</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/09/25/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/10/04/JS%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" title="JS常用方法">JS常用方法</a></span>
   </li>
 
   </ul>
